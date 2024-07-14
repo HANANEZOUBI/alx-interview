@@ -5,15 +5,15 @@
 
 def minOperations(n):
     '''
-    Minimum Operations
+    Fewest number Operations
     '''
     if (n < 2):
         return 0
-    ops, root = 0, 2
-    while root <= n:
-        if n % root == 0:
-            ops += root
-            n = n / root
-            root -= 1
-        root += 1
-    return ops
+    operations, factor = 0, 2
+    while factor <= n:
+        if n % factor == 0:
+            operations += factor
+            n = n / factor
+            factor -= 1
+        factor += 1
+    return operations
